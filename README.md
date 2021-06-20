@@ -1,0 +1,1 @@
+Destruct an existing homepage and rebuild it.
