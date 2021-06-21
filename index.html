@@ -5,16 +5,25 @@
             <style>
                 ul {
                 list-style-type: none;
-                margin: 0;
-                padding: 0;
+                display: flex;
+                overflow: hidden;
+                background-color: white;
+                justify-content: space-between;
+                align-items: center;
             }
                 li {
-                    float: left;
+                    display: flex;
+                    padding: 10px 15px
                 }
-                a {
-                    display: block;
-                    padding: 5px;
-                    background-color: black
+                li a {
+                    display: flex;
+                    text-align: center;
+                    color: black;
+                    background-color: white;
+                    text-decoration: none;
+                }
+                li a:hover {
+                    color: #666;
                 }
             </style>
             <ul>
@@ -29,7 +38,7 @@
             <h2>
                 <form action="/form/submit" method="GET">
                     <input type="text" name="text" class="search" placeholder="Search here!">
-                    <input type="submit" name="submit" class="submit" value="Search">
+                    <input type="submit" name="submit" class="submit" value="Google Search">
                 </form>
             </h2>
         </head>
