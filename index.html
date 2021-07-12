@@ -34,42 +34,52 @@
                 margin-right: auto;
                 width: 30%;
             }
-            .centerbar {
+            .search {
                 display: flex;
-                flex: 100%;
-                background-color: transparent;
-                border: none;
+                flex: 1;
+                background: #fff;
+                border: 1px solid #dfe1e5;
+                border-radius: 24px;
                 margin-left: auto;
                 margin-right: auto;
-                margin-top: -37px;
                 font-size: 16px;
-                padding: 0px;
-                height: 34px;
+                padding: 5px 8px 16px;
+                height: 44px;
                 font-family: arial, sans-serif;
-                width: 527px;
+                width: 584px;
+                outline: none;
+                word-wrap: break-word;
+                box-shadow: none;
+            }
+            .search:hover {
+                background-color: #fff;
+                box-shadow: 0 1px 6px rgba(32,33,36,.28);
+                border-color: rbga(223,225,229,0);
             }
             .submit {
-                display: inline-block;
                 font-size: 14px;
                 background-color: #f8f9fa;
                 border: 1px solid #dadce0;
                 border-radius: 4px;
                 color: #3c4043;
-                padding: 0px 35px;
+                padding: 0px 16px;
                 font-family: arial, sans-serif;
                 text-align: center;
-                margin: 11px 4px;
                 font-size: 14px;
                 line-height: 27px;
+                margin: 11px 4px;
                 height: 36px;
                 min-width: 54px;
                 cursor: pointer;
                 align-items: flex-start;
                 box-sizing: border-box;
+                justify-content: center;
             }
             .submit:hover {
                 box-shadow: 1px 1px rgba(0, 0, 0, .1);
                 background-color: #f8f9fa;
+                border: 1px solid #dadce0;
+                color: #202124;
             }
             .footer {
                 position: fixed;
@@ -97,30 +107,31 @@
                 text-decoration-line: underline;
             }
             .sign-in {
-                width: 115px;
-                height: 35px;
-                background-color: rgb(0, 153, 255);
+                width: 100px;
+                height: 50px;
+                background-color: rgb(26, 115, 232);
                 border-radius: 4px;
+                padding: 9px 15px;
             }
             .sign-in a {
                 color: white;
                 text-decoration: none;
+                font-size: 14px;
             }
             .sign-in:hover {
                 background: #63a0ef;
                 box-shadow: 0 1px 2px 0 rgba(66, 133, 244, 0.3), 0 1px 3px 1px rgba(66,133, 244, 0.15);
             }
             .lucky {
-                display: inline-block;
                 font-size: 14px;
                 background-color: #f8f9fa;
                 border: 1px solid #dadce0;;
                 border-radius: 4px;
                 color: #3c4043;
-                padding: 0px 30px;
+                padding: 0px 16px;
                 font-family: arial, sans-serif;
                 text-align: center;
-                margin: 11px 110px;
+                margin: 11px 4px;
                 font-size: 14px;
                 line-height: 27px;
                 height: 36px;
@@ -128,12 +139,21 @@
                 cursor: pointer;
                 align-items: flex-start;
                 box-sizing: border-box;
-                position: absolute;
+                position: relative;
+                justify-content: center;
             }
             .lucky:hover {
                 box-shadow: 1px 1px rgba(0, 0, 0, .1);
                 background-color: #f8f9fa;
                 border: 1px solid #dadce0;
+                color: #202124;
+            }
+            .buttoncenter {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: auto;
+                margin-right: auto;
             }
             </style>
             <ul>
@@ -150,6 +170,8 @@
             <h2>
                 <form class="centerbar" action="/form/submit" method="GET">
                     <input type="text" name="text" class="search" placeholder="Search here!">
+                </form>
+                <form class="buttoncenter" action="/form/submit" method="GET">
                     <input type="submit" name="submit" class="submit" value="Google Search">
                     <input type="submit" name="submit" class="lucky" value="I'm Feeling Lucky">
                 </form>
